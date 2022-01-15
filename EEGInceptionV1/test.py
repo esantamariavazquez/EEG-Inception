@@ -9,9 +9,9 @@ https://www.kaggle.com/esantamaria/gibuva-erpbci-dataset
 #%% IMPORT LIBRARIES
 import numpy as np
 import h5py, os
-import utils
 from EEGInceptionV1 import EEGInceptionV1
 from tensorflow.keras.callbacks import EarlyStopping
+from sklearn.preprocessing import OneHotEncoder
 
 #%% PARAMETERS
 
@@ -44,14 +44,23 @@ target = np.array(hf.get("target"))
 matrix_dims = np.array(hf.get("matrix_dims"))
 hf.close()
 
+#%% PREPARE FEATURES AND LABELS
 # Reshape epochs for EEG-Inception
 features = features.reshape(
     (features.shape[0], features.shape[1],
      features.shape[2], 1)
 )
 
+
 # One hot encoding of labels
-train_erp_labels = utils.one_hot_labels(erp_labels)
+def one_hot_labels(caategorical_labels):
+    enc = OneHotEncoder(handle_unknown='ignore')
+    on_hot_labels = enc.fit_transform(
+        caategorical_labels.reshape(-1, 1)).toarray()
+    return on_hot_labels
+
+
+train_erp_labels = one_hot_labels(erp_labels)
 
 #%%  TRAINING
 os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
