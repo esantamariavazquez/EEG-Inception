@@ -10,7 +10,7 @@ https://www.kaggle.com/esantamaria/gibuva-erpbci-dataset
 import numpy as np
 import h5py, os
 import utils
-from EEGInception_v1 import EEGInceptionV1
+from EEGInceptionV1 import EEGInceptionV1
 from tensorflow.keras.callbacks import EarlyStopping
 
 #%% PARAMETERS
