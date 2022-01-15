@@ -1,8 +1,7 @@
 # EEG-Inception
-
-## Description
 Official repository of EEG-Inception, a general-purpose and powerful deep convolutional neural network for EEG procesing.
 
+## Description
 Full description of EEG-Inception_v1 in the original article [1]: https://ieeexplore.ieee.org/document/9311146
 
 ## Requirements
