@@ -84,7 +84,7 @@ early_stopping = EarlyStopping(
 fit_hist = model.fit(features,
                      erp_labels,
                      epochs=500,
-                     batch_size=2048,
+                     batch_size=1024,
                      validation_split=0.2,
                      callbacks=[early_stopping])
 
