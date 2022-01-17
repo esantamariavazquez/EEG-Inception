@@ -1,5 +1,6 @@
 """
-Usage example of EEG-Inception
+Usage example of EEG-Inception with an ERP-based BCI dataset from:
+
 
 Download the dataset from:
 https://www.kaggle.com/esantamaria/gibuva-erpbci-dataset
@@ -9,7 +10,7 @@ https://www.kaggle.com/esantamaria/gibuva-erpbci-dataset
 #%% IMPORT LIBRARIES
 import numpy as np
 import h5py, os
-from EEGInceptionV1 import EEGInceptionV1
+from EEGInception import EEGInception
 from tensorflow.keras.callbacks import EarlyStopping
 from sklearn.preprocessing import OneHotEncoder
 
@@ -66,7 +67,7 @@ train_erp_labels = one_hot_labels(erp_labels)
 os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
 
 # Create model
-model = EEGInceptionV1(
+model = EEGInception(
     input_time=1000, fs=128, ncha=8, filters_per_branch=8,
     scales_time=(500, 250, 125), dropout_rate=0.25,
     activation='elu', n_classes=2, learning_rate=0.001)

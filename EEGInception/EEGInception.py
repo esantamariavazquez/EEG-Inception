@@ -6,9 +6,9 @@ from tensorflow.keras.constraints import max_norm
 from tensorflow import keras
 
 
-def EEGInceptionV1(input_time=1000, fs=128, ncha=8, filters_per_branch=8,
-                   scales_time=(500, 250, 125), dropout_rate=0.25,
-                   activation='elu', n_classes=2, learning_rate=0.001):
+def EEGInception(input_time=1000, fs=128, ncha=8, filters_per_branch=8,
+                 scales_time=(500, 250, 125), dropout_rate=0.25,
+                 activation='elu', n_classes=2, learning_rate=0.001):
     """Keras implementation of EEG-Inception. All hyperparameters and
     architectural choices are explained in the original article:
 
