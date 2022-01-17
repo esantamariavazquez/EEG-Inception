@@ -4,7 +4,7 @@ Official repository of EEG-Inception, a general-purpose and powerful deep convol
 ## Description
 Full description of EEG-InceptionV1 in the original article: 
 
-E. Santamaría-Vázquez, V. Martínez-Cagigal, S. Pérez-Velasco, D. Marcos-Martínez, and R. Hornero, “Robust Asynchronous Control of ERP-Based Brain-Computer Interfaces using Deep Learning,” Comput. Methods Programs Biomed., vol. 215, p. 106623, Mar. 2022. URL: https://ieeexplore.ieee.org/document/9311146
+Santamaría-Vázquez, E., Martínez-Cagigal, V., Vaquerizo-Villar, F., & Hornero, R. (2020). EEG-Inception: A Novel Deep Convolutional Neural Network for Assistive ERP-based Brain-Computer Interfaces. IEEE Transactions on Neural Systems and Rehabilitation Engineering. https://doi.org/10.1109/TNSRE.2020.3048106
 
 ## Requirements
 Tensorflow >= 2.0
