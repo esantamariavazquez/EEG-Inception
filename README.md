@@ -8,5 +8,3 @@ Santamaría-Vázquez, E., Martínez-Cagigal, V., Vaquerizo-Villar, F., & Hornero
 
 ## Requirements
 Tensorflow >= 2.0
-
-ABC
