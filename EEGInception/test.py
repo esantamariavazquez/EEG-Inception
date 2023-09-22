@@ -14,9 +14,11 @@ from EEGInception import EEGInception
 from tensorflow.keras.callbacks import EarlyStopping
 from sklearn.preprocessing import OneHotEncoder
 
+os.environ["CUDA_VISIBLE_DEVICES"]="-1"
+
 #%% PARAMETERS
 
-dataset_path = 'PATH TO DATASET (hdf5 file)'
+dataset_path = 'E:/Knowledge/资料/Dataset/eegdata/erp/eeg-inception/data.hdf5'
 
 #%% HYPERPARAMETERS
 
@@ -84,8 +86,8 @@ early_stopping = EarlyStopping(
 # Fit model
 fit_hist = model.fit(features,
                      erp_labels,
-                     epochs=500,
-                     batch_size=1024,
+                     epochs=50,
+                     batch_size=64,
                      validation_split=0.2,
                      callbacks=[early_stopping])
 
